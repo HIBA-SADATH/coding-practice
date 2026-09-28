@@ -1,0 +1,14 @@
+n=int(input())
+li=[]
+for i in range(n):
+    a=list(map(int,input().split()))
+    li.append(a)
+
+for i in range(n):
+    print(*li[i])
+
+print("Transpose matrix is:")    
+for i in range(n):
+    for j in range(n):
+        print(li[j][i],end=" ")
+    print()
