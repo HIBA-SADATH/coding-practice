@@ -1,0 +1,37 @@
+#In the city of Toyland, there are N houses. Noddy is looking for a piece of land in the city to build his house. All the houses in the city lie in a straight line and all of them are given a house number and position of the house from the entry point of the city. Noddy wants to find the house numbers between which he can build the largest house. Write an algorithm to help Noddy to find the house numbers between which he can build his house.
+
+Hint: No two houses will have the same position in case of multiple such answers, print the one with the least distance from the reference point.
+
+Sample Input 0
+
+5
+3 7
+1 9
+2 0
+5 15
+4 30
+output
+4 5
+
+code
+
+n = int(input())
+
+li = []
+
+for i in range(n):
+    a, b = map(int, input().split())
+    li.append((a, b))
+
+li.sort(key =lambda x: x[1])
+maxi=-1
+ 
+for i in range(len(li)):
+    diff=li[i][1]-li[i-1][1]
+    
+    if diff>maxi:
+        maxi=diff
+        ans1=li[i][0]
+        ans2=li[i-1][0]
+
+print(*sorted([ans1,ans2]))
