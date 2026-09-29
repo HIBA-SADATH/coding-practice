@@ -1,0 +1,14 @@
+def fibnonacci(n):
+    if n==1 :
+        return 0
+    elif n==2:
+        return 1
+    else:
+        return fibnonacci(n-1)+fibnonacci(n-2)
+    
+
+
+
+
+n=int(input())
+print(f"The term {n} in the Fibonacci series is {fibnonacci(n)}")
