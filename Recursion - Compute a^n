@@ -1,0 +1,10 @@
+def power(n,m):
+    if m==1:
+        return n
+    else:
+        return n *power(n,m-1)
+        
+n=int(input())
+m=int(input())
+
+print(f"The value of {n} power {m} is {power(n,m)}")
