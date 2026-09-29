@@ -1,0 +1,12 @@
+def sum1(n,arr):
+    if n==1:
+        return arr[0]
+    else:
+        return  arr[0]+sum1(n-1,arr[1:n])
+        
+n=int(input())
+arr=[]
+for i in range(n):
+    arr.append(int(input()))
+    
+print(sum1(n,arr))
