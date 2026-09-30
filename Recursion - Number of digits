@@ -1,0 +1,8 @@
+def no(d):
+    if  d<10:
+        return 1
+    else:
+        return 1+no(d//10)
+        
+d=int(input())
+print(f"The number of digits in {d} is {no(d)}")
