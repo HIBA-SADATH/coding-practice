@@ -1,0 +1,13 @@
+def gcd(f,s):
+    a=max(f,s)
+    b=min(f,s)
+    if b==0:
+        return a
+    else:
+        return gcd(b,a%b)
+        
+f=int(input())
+g=int(input())
+
+print(gcd(f,g))
+    
