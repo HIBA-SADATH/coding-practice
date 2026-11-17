@@ -1,0 +1,16 @@
+def maxim(arr,l):
+    if arr[0]>l:
+        l=arr[0]
+    if len(arr)==1:
+        return l
+        
+    else:
+        return maxim(arr[1:],l)
+        
+s=int(input())
+arr=[]
+for i in range(s):
+    arr.append(int(input()))
+l=arr[0]
+print(f"Maximum element in the array is {maxim(arr,l)}")
+        
